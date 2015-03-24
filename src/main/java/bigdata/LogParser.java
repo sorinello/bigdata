@@ -30,8 +30,8 @@ public class LogParser implements Runnable {
 				// System.out.println(line);
 				Matcher matcher = pattern.matcher(line);
 				if (matcher.find()) {
-					System.out.print("Result " + result + "###");
-					System.out.println(line + matcher.group(3));
+					//System.out.print("Result " + result + "###");
+					//System.out.println(line + matcher.group(3));
 					sumOfBytes += Integer.parseInt(matcher.group(3));
 					result++;
 				}
