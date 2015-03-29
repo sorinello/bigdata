@@ -1,4 +1,4 @@
-package bigdata;
+package bigdata.assignmentonepointzero;
 
 import java.io.IOException;
 import java.util.Date;
