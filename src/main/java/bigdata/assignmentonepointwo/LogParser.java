@@ -9,7 +9,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 public class LogParser implements Runnable {
 	private String fileName;
-	private String ipAddress;
 	private TreeMap<Integer, Long> results = new TreeMap<Integer, Long>();
 	public LogParser(String fileName) throws IOException {
 		this.fileName = fileName;
@@ -21,8 +20,7 @@ public class LogParser implements Runnable {
 		}
 		FileReader logFileReader = new FileReader(log);
 		try (BufferedReader br = new BufferedReader(logFileReader)) {
-			String regex = String.format(
-					"^(.*) - - (.*) (\\d{3}) (\\d+) \"(.*)$", this.ipAddress);
+			String regex = "^(.*) - - (.*) (\\d{3}) (\\d+) \"(.*)$";
 			Pattern pattern = Pattern.compile(regex);
 			String line;
 
